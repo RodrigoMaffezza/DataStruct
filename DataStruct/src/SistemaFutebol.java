@@ -60,12 +60,19 @@ public class SistemaFutebol {
         }
     }
 
+    public void mostraTopo() {
+        // Mostra o último jogador cadastrado.
+        System.out.println("Nome: " + nomes[count - 1] + ", Idade: " + idades[count - 1] + ", Cidade: " + cidades[count - 1]
++ ", Posicao: " + posicoes[count - 1]);
+    }
+
     public static void main(String[] args) {
         // Utilização da classe
         SistemaFutebol time = new SistemaFutebol();
         time.adicionarJogador("João", 22, "São Paulo", "Atacante");
         time.adicionarJogador("Pedro", 25, "Rio de Janeiro", "Goleiro");
         time.adicionarJogador("Rubens", 25, "Rio de Janeiro", "Goleiro");
+        time.mostraTopo();
         time.exibirJogadores();
         time.removerJogador(2);
         time.removerJogador(2);
